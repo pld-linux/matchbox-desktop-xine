@@ -1,5 +1,5 @@
 Summary:	Movie and music player for Matchbox desktop
-Summary(pl):	Odtwarzacz filmów i muzyki dla ¶rodowiska Matchbox
+Summary(pl.UTF-8):   Odtwarzacz filmÃ³w i muzyki dla Å›rodowiska Matchbox
 Name:		matchbox-desktop-xine
 Version:	0.4
 Release:	1
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a matchbox-desktop plugin that allows you to browse and play
 movies and music.
 
-%description -l pl
-Wtyczka matchbox-desktop pozwalaj±ca na przegl±danie i odtwarzanie
-filmów i muzyki.
+%description -l pl.UTF-8
+Wtyczka matchbox-desktop pozwalajÄ…ca na przeglÄ…danie i odtwarzanie
+filmÃ³w i muzyki.
 
 %prep
 %setup -q -n mb-desktop-xine-%{version}
