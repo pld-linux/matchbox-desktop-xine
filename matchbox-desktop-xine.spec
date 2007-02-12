@@ -1,5 +1,5 @@
 Summary:	Movie and music player for Matchbox desktop
-Summary(pl.UTF-8):   Odtwarzacz filmów i muzyki dla środowiska Matchbox
+Summary(pl.UTF-8):	Odtwarzacz filmów i muzyki dla środowiska Matchbox
 Name:		matchbox-desktop-xine
 Version:	0.4
 Release:	1
