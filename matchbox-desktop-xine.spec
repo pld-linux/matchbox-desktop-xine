@@ -5,15 +5,17 @@ Version:	0.4
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://projects.o-hand.com/matchbox/sources/mb-desktop-xine/%{version}/mb-desktop-xine-%{version}.tar.bz2
+Source0:	http://downloads.yoctoproject.org/releases/matchbox/mb-desktop-xine/%{version}/mb-desktop-xine-%{version}.tar.bz2
 # Source0-md5:	3805f463cbd1817c75fed5f9c4cd2f8b
-URL:		http://projects.o-hand.com/matchbox/
+URL:		https://www.yoctoproject.org/software-item/matchbox/
 BuildRequires:	libmatchbox-devel >= 1.1
 BuildRequires:	matchbox-desktop-devel >= 0.8
+BuildRequires:	matchbox-desktop-devel < 2
 BuildRequires:	pkgconfig
 BuildRequires:	xine-lib-devel >= 1:1.0.0
 Requires:	libmatchbox >= 1.1
 Requires:	matchbox-desktop >= 0.8
+Requires:	matchbox-desktop < 2
 Requires:	xine-lib >= 1:1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	libdir=%{_libdir}/matchbox/desktop
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/matchbox/desktop/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/matchbox/desktop/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %attr(755,root,root) %{_libdir}/matchbox/desktop/xinebrowser.so
-%{_pixmapsdir}/*.png
+%{_pixmapsdir}/mbmusic*.png
+%{_pixmapsdir}/mbmovie*.png
+%{_pixmapsdir}/mbplaydisc.png
 %dir %{_datadir}/themes/mbmediabox
 %{_datadir}/themes/mbmediabox/matchbox
